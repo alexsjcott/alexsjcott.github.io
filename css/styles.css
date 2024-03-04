@@ -276,24 +276,27 @@ footer {
 }
 
 .heading {
+  font-family: "ITC Berkeley Old Style", serif; /* Apply elegant font */
+  font-size: 1.5em; /* Decrease font size for a more compact look */
+  font-weight: bold; /* Make the headings bold */
+  margin: 0 0 20px 0; /* Adjust margin for a more compact appearance */
+  text-transform: uppercase; /* Convert text to uppercase for added elegance */
+  letter-spacing: 1px; /* Add slight letter-spacing for refinement */
+  color: #2D403E; /* Choose a rich, deep color */
   position: relative;
   display: inline-block;
-  font-size: 2em;
-  font-weight: 300;
-  margin: 0 0 30px 0;
 }
 
 .heading:after {
-  position: absolute;
   content: '';
-  top: 100%;
-  height: 1px;
-  width: 50px;
+  position: absolute;
+  bottom: -5px; /* Adjust position to be closer to the text */
   left: 0;
-  right: 0;
-  margin: 0 auto;
-  background: #333;
+  width: 50%;
+  height: 1px;
+  background-color: #2D403E; /* Match the heading color */
 }
+
 
 .background-alt {
   background: #f9f9f9;
