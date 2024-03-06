@@ -112,11 +112,6 @@ header {
   animation-duration: 0.75s;
 }
 
-header li {
-  display: inline-block;
-  margin-right: 20px;
-}
-
 header ul {
   width: 100%;
   background: rgb(42, 85, 90);
@@ -126,6 +121,12 @@ header ul {
   border-bottom-left-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+header li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
 
 header a {
   display: inline-block;
@@ -140,6 +141,11 @@ header a:hover {
 }
 
 header a:focus {
+  color: #fff;
+}
+
+header.active {
+  display: block;
   color: #fff;
 }
 
@@ -175,7 +181,7 @@ header.sticky {
   color: #333;
 }
 
-#mobile-menu-close span {
+#mobile-menu-close span {FG
   font-size: 0.5em;
   text-transform: uppercase;
 }
@@ -257,9 +263,8 @@ footer {
   text-decoration: none;
 }
 
-
-
 .shadow {
+  padding-top: 20px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
@@ -845,6 +850,7 @@ footer {
     border-radius: 0;
     width: 100%;
   }
+
   #menu li {
     display: block;
     margin-bottom: 10px;
