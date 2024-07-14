@@ -1,349 +1,218 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Alex Scott, an experienced Java backend developer specializing in various key skills.">
     <title>Alex Scott</title>
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg" type="image/svg+xml">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&display=swap');
+        
+        body {
+            font-family: 'Fira Code', monospace;
+            background-color: #1E1E1E;
+            color: #D4D4D4;
+        }
+
+        .terminal {
+            border: 1px solid #3C3C3C;
+            border-radius: 5px;
+            background-color: #252526;
+        }
+
+        .terminal-header {
+            background-color: #3C3C3C;
+            padding: 5px 10px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        .dot {
+            height: 12px;
+            width: 12px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        .red { background-color: #FF5F56; }
+        .yellow { background-color: #FFBD2E; }
+        .green { background-color: #27C93F; }
+
+        .code-comment { color: #6A9955; }
+        .code-keyword { color: #569CD6; }
+        .code-string { color: #CE9178; }
+    </style>
 </head>
-
-<body>
-    <div id="mobile-menu-open" class="shadow-large">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-    </div>
-    <!-- End #mobile-menu-toggle -->
-    <header>
-        <div id="mobile-menu-close">
-            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+<body class="flex items-center justify-center min-h-screen p-4">
+    <div class="terminal w-full max-w-4xl">
+        <div class="terminal-header flex items-center">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
         </div>
-        <ul id="menu" class="shadow">
-            <li>
-                <a href="#about">About</a>
-            </li>
-            <li>
-                <a href="#experience">Experience</a>
-            </li>
-            <li>
-                <a href="#education">Education</a>
-            </li>
-            <li>
-                <a href="#projects">Projects</a>
-            </li>
-            <li>
-                <a href="#skills">Skills</a>
-            </li>
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
-        </ul>
-    </header>
-    <!-- End header -->
+        <div class="p-6 space-y-6">
+            <!-- Developer Profile Section -->
+            <div>
+                <span class="code-comment">// Developer Profile</span>
+                <h1 class="text-2xl font-bold mt-2"></h1>
+                <p class="code-keyword"></p>
+            </div>
 
-    <div id="lead">
-        <div id="lead-content">
-            <h1>Alex Scott</h1>
-            <h2>Software Developer</h2>
-            <a href="./docs/alex_scott_cv.pdf" class="btn-rounded-white" download>Download CV</a>
-        </div>
-        <!-- End #lead-content -->
+            <!-- Technical Skills Section -->
+            <div>
+                <span class="code-comment">// Technical Skills</span>
+                <ul class="list-disc list-inside mt-2 skills-list"></ul>
+            </div>
 
-        <div id="lead-overlay"></div>
+            <!-- Projects Section -->
+            <div>
+                <span class="code-comment">// Projects</span>
+                <div class="mt-2 space-y-4 projects-list"></div>
+            </div>
 
-        <div id="lead-down">
-            <span>
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </span>
-        </div>
-        <!-- End #lead-down -->
-    </div>
-    <!-- End #lead -->
-
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h2 class="heading">About Me</h2>
+            <!-- Current Employment Section -->
+            <div>
+                <span class="code-comment">// Current Employment</span>
+                <div class="mt-2 work-experience">
+                    <h3 class="font-semibold"></h3>
+                    <p class="work-date"></p>
+                    <ul class="list-disc list-inside mt-2 responsibilities-list"></ul>
                 </div>
-                <div class="col-md-8">
-                    <p>
-                    As a First-Class Honors Computer Science MSc graduate, my journey in software development has been defined by an unwavering commitment to excellence and a relentless pursuit of innovation. At Knowledge Integration, I've delved deep into the realm of cloud computing, honing my Java programming skills and embracing agile methodologies to their fullest potential. Through collaborative projects and contributions to open-source initiatives, I've not only refined my technical prowess in containerization, Git workflows, and frameworks like Grails and Micronaut but also cultivated a mindset of continuous learning and adaptation.
+            </div>
 
-                    Beyond my academic and professional achievements, my diverse background sets me apart. With over five years of experience as a Class 1 HGV Driver, complemented by roles as an Automotive Technician and a former British Army member, I bring a unique blend of communication, problem-solving, and leadership skills to the table. This fusion of experiences equips me with a holistic perspective and an innate ability to navigate complex challenges with resilience and ingenuity.
-
-                    Driven by a passion for making meaningful contributions, I am poised to transition into a more senior software engineering role, where I can leverage my expertise to drive impactful solutions and push the boundaries of innovation. Thank you for considering my profile—I am eager to embark on new software projects and contribute to their success.
-                    </p>
-                </div>
+            <!-- Contact Section -->
+            <div>
+                <span class="code-comment">// Contact</span>
+                <ul class="mt-2 space-y-2 contact-list"></ul>
             </div>
         </div>
     </div>
-    <!-- End #about -->
+<script>
+    // Typing effect function
+    function typeEffect(element, text, speed = 25) {
+        return new Promise((resolve) => {
+            let i = 0;
+            const timer = setInterval(() => {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                } else {
+                    clearInterval(timer);
+                    resolve();
+                }
+            }, speed);
+        });
+    }
 
-    <div id="experience" class="background-alt">
-    <h2 class="heading">Project Experience</h2>
-        <div id="experience-timeline">
-            <div data-date="January 2023 – Present">
-            <h3>Direct Consortial Borrowing (DCB) Service</h3>
-            <h4>Knowledge Integration</h4>
-            <p>
-            As a member of the Direct Consortial Borrowing (DCB) Service project team at Knowledge Integration, I have played a pivotal role in its development journey. Over the course of a year, I have immersed myself in backend development, honing my skills in building APIs, learning reactive programming and Git workflows through active participation in open-source projects. Leveraging my expertise in Java and frameworks like Micronaut, I have contributed as a backend developer, harnessing the power of Project Reactor to implement reactive streams. Working within an Agile framework, I have collaborated closely with experienced senior developers, refining my coding practices and enhancing the project's reliability. From guiding planning stages to refining design choices, I have been committed to ensuring the DCB Service remains robust and effective in meeting its objectives.            <br>
-<!--             shell scripts for testing
-            better at api development
-            keycloak -->
-            </p>
-            <br>
-            <a href="https://github.com/openlibraryenvironment/dcb-service" target="_blank">View DCB Service on GitHub</a>
-            </div>
-            <div data-date="August 2022 - January 2023">
-            <h3>ReShare Project</h3>
-            <h4>Knowledge Integration</h4>
-            <p>
-            My involvement in Project ReShare provided me with invaluable experiences in microservices architecture and containerization using Docker. It marked my introduction to open-source projects, where I served as a backend developer, contributing to the development of microservices. This project also introduced me to backlog refinement practices and project management tools like Jira. Leveraging the Grails framework and Groovy programming language, I collaborated with the ReShare Community, a collective of libraries, consortia, and developers, to realize a user-centered, community-owned resource sharing platform for libraries. Project ReShare's commitment to openness and collaboration resonated with my ethos as a developer, and I am proud to have been a part of this transformative initiative.            </p>
-            <br>
-            </p>
-            <a href="https://github.com/openlibraryenvironment/mod-rs" target="_blank">View mod-rs, a module providing resouce sharing.</a>
-            <br>
-            <a href="https://github.com/openlibraryenvironment/mod-directory" target="_blank">View mod-directory, a module providing locator services.</a>
-            </div>
-            <div data-date="September 2021 - June 2022">
-            <h3>Java-cryptographic-API</h3>
-            <h4>University of Leicester</h4>
-    		<p>
-            During my final year at university, I undertook a project centered around Java cryptographic API, which ignited my passion for programming, particularly in backend development. Delving into the intricacies of cryptography, I explored concepts such as public and private keys, client-server architecture, and secure communication protocols. Implementing a system with client and server Java programs, I gained hands-on experience in managing key pairs, user authentication, and encryption techniques. Through this project, I discovered my affinity for Java programming and developed a keen interest in cryptography, laying the foundation for my continued exploration and growth in software development.
-    		</p>
-            <br>
-            <a href="https://github.com/alexjscott/Java-cryptographic-API" target="_blank">View the Java-cryptographic-API on my GitHub</a>
-            </div>
-        </div>
-    </div>
-    <!-- End #experience -->
+    // Initialize effects when the DOM is loaded
+    document.addEventListener('DOMContentLoaded', async () => {
+        const nameElement = document.querySelector('h1');
+        const titleElement = document.querySelector('.code-keyword');
+        const skillsList = document.querySelector('.skills-list');
+        const projectsList = document.querySelector('.projects-list');
+        const workExperienceTitle = document.querySelector('.work-experience h3');
+        const workExperienceDate = document.querySelector('.work-date');
+        const responsibilitiesList = document.querySelector('.responsibilities-list');
+        const contactList = document.querySelector('.contact-list');
 
-    <div id="education">
-        <h2 class="heading">Education</h2>
-        <div class="education-block">
-            <h3>University of Leicester</h3>
-            <span class="education-date">Sept 2019 - Sept 2022</span>
-            <h4>Computer Science MSc</h4>
-            <ul>
-                <li>
-                    Analysis and Design of Algorithms
-                </li>
-                <li>
-                    Mobile and Web Applications
-                </li>
-                <li>
-                    Software Measurement and Quality Assurance
-                </li>
-                <li>
-                    Foundations of Cybersecurity
-                </li>
-                <li>
-                    Introduction to Object Oriented Programming
-                </li>
-                <li>
-                    Algorithms, Data Structures and Advanced Programming
-                </li>
-                <li>
-                    User Interface Design and Evaluation
-                </li>
-                <li>
-                    Data Analytics
-                </li>
-                <li>
-                    Requirements Engineering and Professional Practice
-                </li>
-                <li>
-                    Databases and Domain Modelling
-                </li>
-                <li>
-                    Operating Systems, Networks and Distributed Systems
-                </li>
-                <li>
-                    Foundations of Computation
-                </li>
-                    ...
-            </ul>
-        </div>
-        <!-- End .education-block -->
+        const skills = [
+            'Object-oriented programming (OOP)',
+            'RESTful APIs',
+            'Database Management',
+            'Version Control (Git)',
+            'Cloud computing',
+            'Microservices',
+            'Containerization'
+        ];
 
-        <div class="education-block">
-            <h3>Leicester Adult Skills and Learning Service</h3>
-            <span class="education-date">Sept 2018 - Sept 2019</span>
-            <h4>Access to Higher Education (Business and Management)</h4>
+        const projects = [
+            {
+                name: 'Direct Consortial Borrowing (DCB) Service',
+                description: "Utilizing Java and Micronaut, I implemented reactive programming with Project Reactor, built APIs, and refined Git workflows. Working in an Agile environment, I collaborated with senior developers to enhance code quality and project reliability. My involvement spanned from initial planning to design refinement, ensuring the DCB Service's robustness and effectiveness."
+            },
+            {
+                name: 'ReShare Project',
+                description: 'As a backend developer for Project ReShare, I contributed to an open-source, community-driven resource sharing platform for libraries. I developed microservices using Grails and Groovy, implemented Docker containerization, and gained experience with Jira for project management. This role enhanced my skills in microservices architecture and agile methodologies while fostering my commitment to collaborative, open-source development.'
+            },
+            {
+                name: 'Java-cryptographic-API',
+                description: 'I led a Java cryptographic API project, implementing client-server architecture with secure communication protocols. This experience honed my skills in backend development, user authentication, and encryption techniques, solidifying my passion for Java programming and cryptography. The project laid a strong foundation for my career in software development.'
+            }
+        ];
 
-            <ul>
-                <li>
-                    Investigating Entrepreneurship
-                </li>
-                <li>
-                    Principles of Business Strategy
-                </li>
-                <li>
-                    Foundations in Corporate Social Responsibility
-                </li>
-                <li>
-                    Principles of Management: Workforce Planning
-                </li>
-                <li>
-                    Business and Organisation Structures
-                </li>
-                <li>
-                    Business and Organisation Culture
-                </li>
-                <li>
-                    Management and Employment Law
-                </li>
-                <li>
-                    Research Project (Business)
-                </li>
-                <li>
-                    Research Project (Management)
-                </li>
-                <li>
-                    Introduction to Business Studies
-                </li>
-                <li>
-                    Introduction to Management
-                </li>
-                    ...
-            </ul>
-        </div>
-        <!-- End .education-block -->
-    </div>
-    <!-- End #education -->
+        const responsibilities = [
+            'Mastered cloud computing and container technologies, implementing advanced container management systems in production environments.',
+            'Contributed to open-source projects, honing Git skills through complex branching strategies and efficient pull request management.',
+            'Developed robust applications using Java frameworks like Grails and Micronaut, demonstrating adaptability and continuous learning in cutting-edge technologies.'
+        ];
 
-    <div id="projects" class="background-alt">
-        <h2 class="heading">My projects</h2>
-        <div class="container">
-            <div class="row">
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/project1.png" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Mobile/Web App for Peer-to-Peer Vehicle Sharing</h3>
-                        <p>
-                            My final year University project.
-                        </p>
-                        <a href="https://github.com/alexjscott/final_year_project">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
+        const contacts = [
+            { icon: 'fas fa-envelope', href: 'mailto:ajscottleicester@gmail.com', text: 'ajscottleicester@gmail.com' },
+            { icon: 'fab fa-linkedin', href: 'https://www.linkedin.com/in/ajscottleicester', text: 'linkedin.com/in/ajscottleicester' },
+            { icon: 'fab fa-github', href: 'https://github.com/alexjscott', text: 'https://github.com/alexjscott' }
+        ];
 
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/project2.png" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Alexa Skill for Spelling Test Practice. (Group Project)</h3>
-                        <p>
-                            Second year University project.
-                        </p>
-                        <a href="https://github.com/alexjscott/Spelling-Test-Practice-Alexa-Skill-">View Project</a>
-                    </div>
+        // Typing effect for name
+        await typeEffect(nameElement, 'Alex Scott');
+        // Typing effect for title
+        await typeEffect(titleElement, 'Software Developer');
 
+        // Typing effect for skills
+        for (const skill of skills) {
+            const li = document.createElement('li');
+            skillsList.appendChild(li);
+            await typeEffect(li, skill);
+        }
 
+        // Typing effect for projects
+        for (const project of projects) {
+            const projectDiv = document.createElement('div');
+            const projectTitle = document.createElement('h3');
+            const projectDesc = document.createElement('p');
 
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-            </div>
-        </div>
-    </div>
-    <!-- End #projects -->
+            projectTitle.classList.add('font-semibold');
+            projectDesc.classList.add('code-string');
 
-    <div id="skills">
-        <h2 class="heading">Skills</h2>
-        <ul>
-            <li>Cloud Computing</li>
-            <li>Micro-Sevices</li>
-            <li>Java</li>
-            <li>Micronaut</li>
-            <li>Agile</li>
-            <li>Back-end</li>
-            <li>Spring</li>
-            <li>Cyber-Security</li>
-            <li>Git</li>
-            <li>Shell</li>
-            <li>Bash</li>
-            <li>MySQL</li>
-            <li>Postgres</li>
-            <li>Groovy</li>
-            <li>Python</li>
-            <li>JSON</li>
-            <li>XML</li>
-            <li>Grails</li>
-            <li>HTML5</li>
-            <li>CSS</li>
-            <li>AJAX</li>
-            <li>VSC</li>
-            <li>Eclipse</li>
-            <li>Intelij</li>
-            <li>Kubernetes</li>
-            <li>Docker</li>
-        </ul>
-    </div>
-    <!-- End #skills -->
+            projectDiv.appendChild(projectTitle);
+            projectDiv.appendChild(projectDesc);
+            projectsList.appendChild(projectDiv);
 
-    <div id="contact">
-        <h2 class="heading">Get in Touch</h2>
-        <div id="contact-form">
-            <form method="POST" action="https://formspree.io/f/mayzywzo">
-                <input type="hidden" name="_subject" value="Contact request from personal website" />
-                <input type="email" name="_replyto" placeholder="Your email" required>
-                <textarea name="message" placeholder="Your message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </div>
-        <!-- End #contact-form -->
-    </div>
-    <!-- End #contact -->
+            await typeEffect(projectTitle, project.name);
+            await typeEffect(projectDesc, `"${project.description}"`);
+        }
 
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-5 copyright">
-                    <p>
-                        Copyright &copy; <span id="current-year">2022</span> Alex Scott
-                    </p>
-                </div>
-                <div class="col-sm-2 top">
-                    <span id="to-top">
-                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
-                    </span>
-                </div>
-                <div class="col-sm-5 social">
-                    <ul>
-                        <li>
-                            <a href="https://github.com/alexjscott" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/ajscottleicester/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="javascript:var KICKASS_SITE_KEY='test';var el = document.createElement('script'); el.src = '//hi.kickassapp.com/kickass-mysite.js';document.body.appendChild(el);void(0);">Bored?</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- End footer -->
+        // Typing effect for work experience
+        await typeEffect(workExperienceTitle, 'Software Developer - Knowledge Integration');
+        await typeEffect(workExperienceDate, '2022 - Present');
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/scripts.min.js"></script>
+        // Typing effect for responsibilities
+        for (const responsibility of responsibilities) {
+            const li = document.createElement('li');
+            responsibilitiesList.appendChild(li);
+            await typeEffect(li, responsibility);
+        }
+
+        // Typing effect for contact details
+        for (const contact of contacts) {
+            const li = document.createElement('li');
+            const icon = document.createElement('i');
+            const a = document.createElement('a');
+
+            icon.className = `${contact.icon} mr-2`;
+            a.href = contact.href;
+            a.classList.add('hover:underline');
+            li.appendChild(icon);
+            li.appendChild(a);
+            contactList.appendChild(li);
+
+            await typeEffect(a, contact.text);
+        }
+    });
+</script>
 </body>
-
 </html>
-
-
 

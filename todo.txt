@@ -1,3 +1,0 @@
-1. clone repo and push changes
-2. test hosting on github
-3. buy domain name (google domains is best i can see)
